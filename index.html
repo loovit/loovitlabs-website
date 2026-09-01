@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loovit Labs - Venture Studio & Laboratório de Software</title>
-    <meta name="description" content="Laboratório de produtos digitais, SaaS e aplicativos móveis de alta escala. Desenvolvemos o futuro do software com tecnologia, design e impacto.">
+    <meta name="description" content="Laboratório de produtos digitais, SaaS e aplicativos móveis de alta escala. Desenvolvemos o futuro do software com inovação, confiança e tecnologia.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo_icon.png">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,16 +30,13 @@
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        brand: {
-                            50: '#f0f9ff',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                        },
-                        accent: {
-                            purple: '#a855f7',
-                            cyan: '#06b6d4',
-                            emerald: '#10b981',
+                        loovit: {
+                            cyan: '#00C2FF',
+                            blue: '#0052FF',
+                            deepblue: '#0038FF',
+                            lilas: '#B5009E',
+                            purple: '#7928CA',
+                            violet: '#6366F1',
                         }
                     }
                 }
@@ -52,41 +52,35 @@
         }
 
         .hero-glow {
-            background: radial-gradient(circle at 50% 20%, rgba(14, 165, 233, 0.18) 0%, rgba(168, 85, 247, 0.12) 40%, rgba(3, 7, 18, 0) 75%);
+            background: radial-gradient(circle at 50% 20%, rgba(0, 194, 255, 0.18) 0%, rgba(181, 0, 158, 0.14) 35%, rgba(3, 7, 18, 0) 75%);
         }
 
         .glass-card {
-            background: rgba(17, 24, 39, 0.7);
+            background: rgba(15, 23, 42, 0.7);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .glass-card:hover {
-            border-color: rgba(56, 189, 248, 0.3);
+            border-color: rgba(0, 194, 255, 0.35);
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #38bdf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .accent-gradient {
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+        .brand-gradient-text {
+            background: linear-gradient(135deg, #00C2FF 0%, #7928CA 50%, #B5009E 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .grid-bg {
-            background-size: 40px 40px;
+            background-size: 44px 44px;
             background-image: 
                 linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         }
     </style>
 </head>
-<body class="selection:bg-sky-500 selection:text-black min-h-screen relative overflow-x-hidden">
+<body class="selection:bg-[#00C2FF] selection:text-black min-h-screen relative overflow-x-hidden">
 
     <!-- Background Grid -->
     <div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
@@ -95,32 +89,32 @@
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#030712]/80 backdrop-blur-xl border-b border-white/5 transition-all">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             
-            <!-- Logo -->
-            <a href="/" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-purple-500 p-[1px] shadow-lg shadow-sky-500/20 group-hover:scale-105 transition">
-                    <div class="w-full h-full bg-[#030712] rounded-[15px] flex items-center justify-center">
-                        <i class="fa-solid fa-flask-vial text-sky-400 text-lg"></i>
+            <!-- Official Brand Logo -->
+            <a href="/" class="flex items-center gap-3.5 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#00C2FF] to-[#B5009E] p-[1.5px] shadow-lg shadow-sky-500/20 group-hover:scale-105 transition">
+                    <div class="w-full h-full bg-[#030712] rounded-[14px] flex items-center justify-center p-1.5">
+                        <img src="assets/logo_icon.png" alt="Loovit Labs" class="w-full h-full object-contain rounded-lg">
                     </div>
                 </div>
                 <div class="leading-none">
-                    <span class="text-xl font-extrabold tracking-tight text-white flex items-center gap-1.5">
-                        Loovit <span class="text-xs font-bold uppercase tracking-widest text-sky-400 bg-sky-950/80 border border-sky-800/60 px-2 py-0.5 rounded-md">Labs</span>
+                    <span class="text-xl font-black tracking-tight text-white flex items-center gap-2">
+                        Loovit <span class="text-[10px] font-black uppercase tracking-widest text-[#00C2FF] bg-[#00C2FF]/10 border border-[#00C2FF]/30 px-2 py-0.5 rounded-md">Labs</span>
                     </span>
-                    <span class="text-[10px] text-slate-500 font-mono tracking-wider block mt-1">VENTURE & SOFTWARE STUDIO</span>
+                    <span class="text-[10px] text-slate-400 font-mono tracking-wider block mt-1">VENTURE & SOFTWARE STUDIO</span>
                 </div>
             </a>
 
             <!-- Desktop Links -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-400">
                 <a href="#products" class="hover:text-white transition">Nossos Produtos</a>
+                <a href="#identity" class="hover:text-white transition">Identidade & DNA</a>
                 <a href="#expertise" class="hover:text-white transition">Especialidades</a>
-                <a href="#stack" class="hover:text-white transition">Stack Tecnológica</a>
-                <a href="#about" class="hover:text-white transition">Sobre</a>
+                <a href="#stack" class="hover:text-white transition">Tecnologias</a>
             </div>
 
             <!-- CTA -->
             <div class="flex items-center gap-4">
-                <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-sm shadow-lg shadow-sky-500/25 transition transform active:scale-95">
+                <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-[#00C2FF] via-[#7928CA] to-[#B5009E] hover:opacity-90 text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow-lg shadow-purple-500/25 transition transform active:scale-95">
                     <span>Falar Conosco</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
@@ -134,68 +128,119 @@
         <div class="max-w-5xl mx-auto text-center">
             
             <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-300 text-xs font-semibold mb-8 backdrop-blur-md">
-                <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
-                Inovando o mercado com produtos digitais escaláveis
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00C2FF]/30 bg-[#00C2FF]/10 text-[#00C2FF] text-xs font-bold mb-8 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-[#00C2FF] animate-ping"></span>
+                Jovialidade, Modernidade & Inovação Tecnológica
             </div>
 
             <!-- Main Headline -->
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-8">
                 Construímos o software do futuro, <br class="hidden sm:inline">
-                <span class="accent-gradient">do conceito à escala global.</span>
+                <span class="brand-gradient-text">com confiança e inspiração.</span>
             </h1>
 
             <!-- Subtitle -->
             <p class="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed font-normal">
-                O <strong class="text-slate-200">Loovit Labs</strong> é um laboratório de tecnologia e estúdio de produtos que idealiza, desenvolve e escala aplicações web, soluções móveis nativas e infraestruturas em nuvem de alta confiabilidade.
+                O <strong class="text-slate-200">Loovit Labs</strong> é o estúdio de tecnologia onde unimos segurança e inovação para criar ecossistemas digitais, aplicativos móveis de alto impacto e produtos SaaS escaláveis.
             </p>
 
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#products" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-slate-950 font-bold px-8 py-4 rounded-2xl text-base shadow-xl transition transform hover:-translate-y-0.5">
-                    <i class="fa-solid fa-layer-group text-sky-600"></i>
-                    <span>Ver Nossos Produtos</span>
+                <a href="#products" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-slate-950 font-extrabold px-8 py-4 rounded-2xl text-base shadow-xl transition transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-layer-group text-[#0052FF]"></i>
+                    <span>Conhecer Nossos Produtos</span>
                 </a>
-                <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 glass-card hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-2xl text-base transition">
-                    <i class="fa-solid fa-paper-plane text-slate-400"></i>
-                    <span>Iniciar uma Parceria</span>
+                <a href="#identity" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 glass-card hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-2xl text-base transition">
+                    <i class="fa-solid fa-lightbulb text-[#B5009E]"></i>
+                    <span>Nosso Propósito</span>
                 </a>
             </div>
 
             <!-- Stats Bar -->
             <div class="mt-20 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
                 <div>
-                    <span class="text-3xl sm:text-4xl font-extrabold text-white block font-mono">100%</span>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Infraestrutura Própria</span>
+                    <span class="text-3xl sm:text-4xl font-extrabold text-[#00C2FF] block font-mono">100%</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Segurança & Confiança</span>
                 </div>
                 <div>
-                    <span class="text-3xl sm:text-4xl font-extrabold text-sky-400 block font-mono">Mobile</span>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">First & Offline-Ready</span>
+                    <span class="text-3xl sm:text-4xl font-extrabold text-white block font-mono">Mobile</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">First & Offline-Ready</span>
                 </div>
                 <div>
-                    <span class="text-3xl sm:text-4xl font-extrabold text-purple-400 block font-mono">Cloud</span>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Native & Scalable</span>
+                    <span class="text-3xl sm:text-4xl font-extrabold text-[#B5009E] block font-mono">Inovação</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Design & Sucesso</span>
                 </div>
                 <div>
-                    <span class="text-3xl sm:text-4xl font-extrabold text-emerald-400 block font-mono">SaaS</span>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Venture Ecosystem</span>
+                    <span class="text-3xl sm:text-4xl font-extrabold text-[#7928CA] block font-mono">SaaS</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Venture Ecosystem</span>
                 </div>
             </div>
 
         </div>
     </header>
 
+    <!-- Brand Identity & DNA Section -->
+    <section id="identity" class="relative z-10 py-24 px-6 bg-slate-950/40 border-t border-b border-white/5">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono uppercase tracking-widest text-[#00C2FF] font-bold block mb-2">// NOSSO DNA & PROPÓSITO</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Criado por profissionais jovens e capacitados</h2>
+                <p class="text-slate-400 mt-3 text-base">
+                    Nossa identidade visual reflete o equilíbrio perfeito entre rigor técnico e visão criativa.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Card Azul: Confiança, Segurança, Força -->
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-[#0052FF] relative overflow-hidden">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-[#0052FF]/20 text-[#00C2FF] flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-extrabold text-white">Azul • Solidez & Força</h3>
+                            <span class="text-xs font-mono text-[#00C2FF]">CONFIANÇA • SEGURANÇA • ROBUSTEZ</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Representa o nosso compromisso inegociável com infraestruturas seguras, dados protegidos por criptografia e sistemas de alta disponibilidade que nunca falham.
+                    </p>
+                </div>
+
+                <!-- Card Roxo/Lilás: Criatividade, Inspiração, Sucesso -->
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-[#B5009E] relative overflow-hidden">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-[#B5009E]/20 text-[#B5009E] flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-extrabold text-white">Lilás / Roxo • Inspiração</h3>
+                            <span class="text-xs font-mono text-[#B5009E]">IMAGINATIVO • SUCESSO • EXPERIÊNCIA</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Simboliza o lado inovador do laboratório: interfaces encantadoras, pensadas para o usuário final, com o dinamismo de uma equipe jovem e obstinada por resultados.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
     <!-- Products Showcase Section -->
-    <section id="products" class="relative z-10 py-24 px-6 bg-slate-950/50 border-t border-b border-white/5">
+    <section id="products" class="relative z-10 py-24 px-6">
         <div class="max-w-7xl mx-auto">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div>
-                    <span class="text-xs font-mono uppercase tracking-widest text-sky-400 font-bold block mb-2">// PORTFÓLIO DE PRODUTOS</span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">Criados no nosso laboratório</h2>
+                    <span class="text-xs font-mono uppercase tracking-widest text-[#00C2FF] font-bold block mb-2">// PORTFÓLIO DE PRODUTOS</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">Nossas Criações</h2>
                 </div>
                 <p class="text-slate-400 max-w-md text-sm leading-relaxed">
-                    Aplicações proprietárias desenvolvidas com foco obsessivo em usabilidade, segurança de dados e alta performance.
+                    Aplicações proprietárias desenvolvidas com foco obsessivo em usabilidade e performance.
                 </p>
             </div>
 
@@ -203,8 +248,7 @@
                 
                 <!-- Featured Product 1: CRESCER -->
                 <div class="lg:col-span-8 glass-card rounded-3xl p-8 sm:p-10 relative overflow-hidden group">
-                    <!-- Subtle Glow -->
-                    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-sky-500/15 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-[#00C2FF]/15 rounded-full blur-3xl pointer-events-none"></div>
 
                     <div class="relative z-10 flex flex-col justify-between h-full">
                         <div>
@@ -212,31 +256,31 @@
                                 <span class="bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1.5">
                                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Live em Produção
                                 </span>
-                                <span class="text-xs font-mono text-slate-500">HEALTHTECH • MOBILE APP</span>
+                                <span class="text-xs font-mono text-slate-400">HEALTHTECH • MOBILE APP</span>
                             </div>
 
                             <div class="flex items-center gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-600 to-teal-400 flex items-center justify-center text-white text-2xl shadow-lg shadow-sky-500/20">
+                                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#00C2FF] to-teal-400 flex items-center justify-center text-white text-2xl shadow-lg shadow-sky-500/20">
                                     <i class="fa-solid fa-seedling"></i>
                                 </div>
                                 <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Crescer</h3>
                             </div>
 
                             <p class="text-slate-300 text-base leading-relaxed mb-6 max-w-xl">
-                                Plataforma definitiva de saúde e desenvolvimento infantil. Acompanhamento oficial das curvas da OMS, calendário de vacinas PNI 2026, alarmes de medicamentos e prontuário digital com QR Code para pediatras.
+                                Plataforma definitiva de saúde e desenvolvimento infantil. Acompanhamento oficial das curvas da OMS, calendário de vacinas PNI 2026, alarmes sonoros de doses de medicamentos e prontuário digital com QR Code para pediatras.
                             </p>
 
                             <div class="flex flex-wrap gap-2 mb-8 text-xs font-mono text-slate-400">
-                                <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-lg">React Native</span>
+                                <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-lg text-[#00C2FF]">React Native</span>
                                 <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-lg">Expo SDK 54</span>
                                 <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-lg">Python Django</span>
                                 <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-lg">PostgreSQL</span>
-                                <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-lg">Offline-First</span>
+                                <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-lg text-[#B5009E]">Offline-First</span>
                             </div>
                         </div>
 
                         <div>
-                            <a href="https://crescer.loovitlabs.com.br" target="_blank" class="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-6 py-3.5 rounded-xl text-sm transition transform hover:scale-105">
+                            <a href="https://crescer.loovitlabs.com.br" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-[#00C2FF] to-[#0052FF] hover:opacity-90 text-white font-extrabold px-6 py-3.5 rounded-xl text-sm transition transform hover:scale-105 shadow-lg shadow-sky-500/20">
                                 <span>Acessar Projeto Crescer</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                             </a>
@@ -244,22 +288,22 @@
                     </div>
                 </div>
 
-                <!-- Product 2: IN INCUBATION (Upcoming SaaS) -->
-                <div class="lg:col-span-4 glass-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden border-dashed border-white/15">
+                <!-- Product 2: IN INCUBATION -->
+                <div class="lg:col-span-4 glass-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden border-dashed border-[#B5009E]/30">
                     <div>
-                        <span class="bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-bold px-3 py-1 rounded-full inline-block mb-6">
+                        <span class="bg-[#B5009E]/15 border border-[#B5009E]/30 text-[#B5009E] text-xs font-bold px-3 py-1 rounded-full inline-block mb-6">
                             🧪 Em Incubação
                         </span>
 
                         <h3 class="text-xl font-bold text-white mb-2">Próximo SaaS</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Novas soluções de inteligência artificial e produtividade estão sendo prototipadas em nosso pipeline.
+                            Novas soluções digitais e automações inteligentes com IA estão sendo prototipadas em nosso laboratório.
                         </p>
                     </div>
 
-                    <div class="p-4 rounded-2xl bg-white/5 border border-white/5 text-xs text-slate-500 font-mono flex items-center justify-between">
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/5 text-xs text-slate-400 font-mono flex items-center justify-between">
                         <span>STATUS: P&D ATIVO</span>
-                        <i class="fa-solid fa-circle-notch animate-spin text-purple-400"></i>
+                        <i class="fa-solid fa-circle-notch animate-spin text-[#B5009E]"></i>
                     </div>
                 </div>
 
@@ -268,20 +312,19 @@
         </div>
     </section>
 
-    <!-- Core Capabilities / Expertise -->
-    <section id="expertise" class="relative z-10 py-24 px-6">
+    <!-- Core Capabilities -->
+    <section id="expertise" class="relative z-10 py-24 px-6 bg-slate-950/40 border-t border-b border-white/5">
         <div class="max-w-7xl mx-auto">
             
             <div class="text-center max-w-3xl mx-auto mb-20">
-                <span class="text-xs font-mono uppercase tracking-widest text-sky-400 font-bold block mb-2">// NOSSAS ESPECIALIDADES</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Engenharia de precisão para desafios reais</h2>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#00C2FF] font-bold block mb-2">// NOSSAS ESPECIALIDADES</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Engenharia de precisão para produtos de alto impacto</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 
-                <!-- Card 1 -->
                 <div class="glass-card p-8 rounded-3xl group">
-                    <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                    <div class="w-14 h-14 rounded-2xl bg-[#00C2FF]/10 border border-[#00C2FF]/20 text-[#00C2FF] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Mobile & Offline-First</h3>
@@ -290,9 +333,8 @@
                     </p>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="glass-card p-8 rounded-3xl group">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                    <div class="w-14 h-14 rounded-2xl bg-[#7928CA]/10 border border-[#7928CA]/20 text-[#7928CA] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-server"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Cloud & DevOps Privado</h3>
@@ -301,9 +343,8 @@
                     </p>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="glass-card p-8 rounded-3xl group">
-                    <div class="w-14 h-14 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                    <div class="w-14 h-14 rounded-2xl bg-[#B5009E]/10 border border-[#B5009E]/20 text-[#B5009E] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">SaaS & Automação</h3>
@@ -317,34 +358,34 @@
         </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section id="stack" class="relative z-10 py-20 px-6 bg-slate-950/40 border-t border-b border-white/5">
+    <!-- Tech Stack -->
+    <section id="stack" class="relative z-10 py-20 px-6">
         <div class="max-w-7xl mx-auto text-center">
             
-            <span class="text-xs font-mono uppercase tracking-widest text-slate-500 font-semibold block mb-8">TECNOLOGIAS DE PONTA NO NOSSO CORE</span>
+            <span class="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold block mb-8">TECNOLOGIAS DE PONTA NO NOSSO CORE</span>
 
-            <div class="flex flex-wrap items-center justify-center gap-10 sm:gap-16 opacity-75 hover:opacity-100 transition">
-                <div class="flex items-center gap-2 text-slate-400 font-bold text-sm">
-                    <i class="fa-brands fa-react text-2xl text-cyan-400"></i>
+            <div class="flex flex-wrap items-center justify-center gap-10 sm:gap-16 opacity-80 hover:opacity-100 transition">
+                <div class="flex items-center gap-2 text-slate-300 font-bold text-sm">
+                    <i class="fa-brands fa-react text-2xl text-[#00C2FF]"></i>
                     <span>React Native</span>
                 </div>
-                <div class="flex items-center gap-2 text-slate-400 font-bold text-sm">
+                <div class="flex items-center gap-2 text-slate-300 font-bold text-sm">
                     <i class="fa-brands fa-python text-2xl text-yellow-400"></i>
                     <span>Python / Django</span>
                 </div>
-                <div class="flex items-center gap-2 text-slate-400 font-bold text-sm">
-                    <i class="fa-brands fa-js text-2xl text-blue-400"></i>
+                <div class="flex items-center gap-2 text-slate-300 font-bold text-sm">
+                    <i class="fa-brands fa-js text-2xl text-[#0052FF]"></i>
                     <span>TypeScript</span>
                 </div>
-                <div class="flex items-center gap-2 text-slate-400 font-bold text-sm">
-                    <i class="fa-solid fa-database text-2xl text-sky-500"></i>
+                <div class="flex items-center gap-2 text-slate-300 font-bold text-sm">
+                    <i class="fa-solid fa-database text-2xl text-[#00C2FF]"></i>
                     <span>PostgreSQL</span>
                 </div>
-                <div class="flex items-center gap-2 text-slate-400 font-bold text-sm">
-                    <i class="fa-brands fa-docker text-2xl text-blue-500"></i>
+                <div class="flex items-center gap-2 text-slate-300 font-bold text-sm">
+                    <i class="fa-brands fa-docker text-2xl text-blue-400"></i>
                     <span>Docker</span>
                 </div>
-                <div class="flex items-center gap-2 text-slate-400 font-bold text-sm">
+                <div class="flex items-center gap-2 text-slate-300 font-bold text-sm">
                     <i class="fa-solid fa-cloud text-2xl text-red-500"></i>
                     <span>Oracle Cloud</span>
                 </div>
@@ -353,21 +394,21 @@
         </div>
     </section>
 
-    <!-- Contact / About Section -->
+    <!-- Contact Section -->
     <section id="contact" class="relative z-10 py-24 px-6">
         <div class="max-w-4xl mx-auto text-center glass-card p-10 sm:p-16 rounded-[40px] border border-white/10 relative overflow-hidden">
-            <div class="absolute -top-24 -left-24 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-[#B5009E]/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-[#00C2FF]/20 rounded-full blur-3xl pointer-events-none"></div>
 
             <div class="relative z-10">
-                <span class="text-xs font-mono uppercase tracking-widest text-sky-400 font-bold block mb-4">// CONECTE-SE AO LABORATÓRIO</span>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#00C2FF] font-bold block mb-4">// CONECTE-SE AO LABORATÓRIO</span>
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">Vamos criar algo extraordinário juntos?</h2>
                 <p class="text-slate-300 text-base max-w-xl mx-auto mb-10 leading-relaxed">
                     Seja para parcerias estratégicas, consultoria de alta escala ou desenvolvimento de novas plataformas, nossa equipe está pronta.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="mailto:contato@loovitlabs.com.br" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-950 font-bold px-8 py-4 rounded-2xl text-base shadow-lg transition transform hover:scale-105">
+                    <a href="mailto:contato@loovitlabs.com.br" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#00C2FF] via-[#7928CA] to-[#B5009E] hover:opacity-90 text-white font-extrabold px-8 py-4 rounded-2xl text-base shadow-lg shadow-purple-500/25 transition transform hover:scale-105">
                         <i class="fa-solid fa-envelope"></i>
                         <span>contato@loovitlabs.com.br</span>
                     </a>
@@ -379,8 +420,8 @@
     <!-- Footer -->
     <footer class="relative z-10 py-12 px-6 border-t border-white/5 text-slate-500 text-xs text-center font-mono">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2 text-white font-bold font-sans">
-                <i class="fa-solid fa-flask-vial text-sky-400"></i>
+            <div class="flex items-center gap-3 text-white font-bold font-sans">
+                <img src="assets/logo_icon.png" alt="Loovit Labs Logo" class="w-6 h-6 object-contain rounded-md">
                 <span>Loovit Labs</span>
             </div>
             <p>© 2026 Loovit Labs • Todos os direitos reservados. Brasil.</p>
